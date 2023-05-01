@@ -30,11 +30,8 @@ public class JpaDemoApplication implements CommandLineRunner {
 		logger.info("Inserting 10004 -> {}", repository.insert(new Person("Tara", "Berlin",new Date())));
 		logger.info("Updating 10003 ->  {}", repository.update(new Person("Pieter", "Utrecht", new Date())));
 		repository.deleteById(10002);
-		/*
 		logger.info("All users ->SpringJdbcDemoApplication {}", repository.findAll());
-		logger.info("Deleting 10002 -> No of Row Deleted - {}", repository.deleteById(10002));
 
-	   */
 	}
 
 }

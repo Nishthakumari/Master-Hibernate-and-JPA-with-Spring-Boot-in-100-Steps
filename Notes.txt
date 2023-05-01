@@ -73,6 +73,21 @@ it will call update, else it will call insert method.
 Even if we give id during insert, hibernate ignore it and assigns its own ID.
 
 
+----------------------------------------------------------------------------------------------------------
+To implement findAll method, we have to write HQL. Hibernate Query Language.
+
+This is not SQL, In SQl, we use select. But in JPA we have to write something called JPQL, Java Persistence
+Query Language.
+
+So here, Instead of defining a query, We will use something called namedQuery, which give query a name and use it.
+
+We define namedQuery on Entity.
+
+JPQL does not uses database, but it uses entities.
+
+
+
+
 
 
 
