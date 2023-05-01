@@ -63,4 +63,18 @@ This triggers a schema update using Hibernate features, which automatically crea
 in-memory database.
 
 
+Implementing insert and update JPA Repository Methods
+
+--------------------------------------------------------------------------------------------------------------
+
+Whether we update or insert, we need to call merge method of entity manager, if we have id already that means
+it will call update, else it will call insert method.
+
+Even if we give id during insert, hibernate ignore it and assigns its own ID.
+
+
+
+
+
+
 
