@@ -26,5 +26,41 @@ Hibernate is the most popular ORM framework, JPA came later.
 
 JPA is the standard of doing Object Relation Mapping.
 
+Implementing findById JPA Repository Method
+----------------------------------------------------------------------------------------------------------------
+
+To manage entity, we create a class called repository.
+We add @Repository and @Transactional annotation.
+@Repository says that this is a repository and @Transactional says that we do transaction here.
+
+Whenever we inset, update, delete, transaction is very important.
+
+When we do 3-4 update in a single transaction, we want all of them to successful of fail together.
+
+Here we implement transaction at the level of repository.
+
+Ideally, transaction have to be implemented around our business services, but for this example we will restrict
+ our views to repository.
+
+But what is the way to connect to database?
+
+In JDBC, we used JDBCTemplate. JDBCTemplate was autowired with data source connection, and we used that to
+fire our queries.
+
+Next, we create our method to deliver our data.
+
+In JPA, there is something called EntityManager. EntityManger manages the  entity.
+
+All the operations that we perform in a specific sessions are stored inside our entity manager.
+All the operations are not really stored in the entity manager, but in something called persistent
+context.Entity manager is the interface to the persistance context.All operations have to be going
+through the entity manager.
+
+
+Springboot's auto configuration has the ability to recognize the usage of an in-memory database and
+detect JPAs in the class. It also identifies defined entities when the entity keyword is used.
+This triggers a schema update using Hibernate features, which automatically creates a table for the
+in-memory database.
+
 
 
