@@ -1,0 +1,30 @@
+Quick introduction to JPA
+-----------------------------------------------------------------------------------------------------------------
+
+JPA - Java Persistence API.
+In JDBC, we write a query and map the parameters to it. And In reverse side, when we get results from database,
+we map them back to beans.
+Writing these complex queries is difficult for java developer.
+
+That's where JPA comes in.
+
+Why don't we map object/entity directly to row in a table?
+
+In JPA, we define something called Entity and we define relationship between entities as well.
+
+Once we define Entity and Relationships, JPA implementation will take care of identifying the entities and creating
+ the right queries for you, based on operation you would want to perform.
+
+ So the job of writing queries shifts from developer to a framework called JPA,
+
+ JPA is like an interface. It defines a set of annotations and a set of interfaces.
+ Hibernate is the most popular implementation of JPA.
+
+ Hibernate implements JPA.
+
+Hibernate is the most popular ORM framework, JPA came later.
+
+JPA is the standard of doing Object Relation Mapping.
+
+
+
